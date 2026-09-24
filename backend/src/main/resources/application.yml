@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: attendance
+  datasource:
+    url: jdbc:h2:file:./attendance-db;AUTO_SERVER=FALSE
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: false
+
+server:
+  port: 8080
+
+app:
+  demo-mode: true          # one-click reviewer logins; set false in production
+  threshold: 75.0          # % required for end-sem eligibility
+  critical-threshold: 65.0  # % below which a defaulter is "critical"
+  semester-end: 2026-12-11  # drives "recoverable?" estimates
+  holidays: 2026-09-08,2026-09-21
