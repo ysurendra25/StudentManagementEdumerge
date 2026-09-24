@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.log
+attendance-db*
+backend/target/
+backend/attendance-db*
+backend/hs_err_pid*.log
+node_modules/
+frontend/dist/
+.env
+.venv/
